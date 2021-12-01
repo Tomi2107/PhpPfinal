@@ -7,7 +7,7 @@ class ConexionDB {
     private $databaseName;
     private $conexion;
 
-    function __construct($host,$user,$password,$databaseName) {
+    function __construct($localhost,$user,$password,$databaseName) {
         $this->host=$localhost;
         $this->user=$id17609461_tom;
         $this->password=$L12345Ll_1234;
