@@ -1,16 +1,16 @@
 <?php 
 
 class ConexionDB {
-    private $localhost;
-    private $id17609461_tom;
-    private $12345Ll-12345;
-    private $id17609461_cac;
+    private $host;
+    private $user;
+    private $password;
+    private $databaseName;
     private $conexion;
 
-    function __construct($localhost,$id17609461_tom,$12345Ll-12345,$id17609461_cac) {
+    function __construct($host,$user,$password,$databaseName) {
         $this->host=$localhost;
         $this->user=$id17609461_tom;
-        $this->password=$12345Ll-12345;
+        $this->password=$L12345Ll_1234;
         $this->databaseName=$id17609461_cac;
     }
 
@@ -19,7 +19,7 @@ class ConexionDB {
      * matienen la conexión en el atributo $conexion
      */
     public function conectar() {
-        $this->conexion = new mysqli($this->localhost,$this->id17609461_tom,$this->12345Ll-12345,$this->id17609461_cac);
+        $this->conexion = new mysqli($this->host,$this->user,$this->password,$this->databaseName);
         if($this->conexion->connect_errno) {
             die("Error de conexión: (" . $this->conn->connect_error . ")" . $this->conn->connect_errno);
         }
